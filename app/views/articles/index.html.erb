@@ -1,1 +1,12 @@
 <h1>Hello, Rails!</h1>
+
+<% @articles.each do |article| %>
+  <article>
+    <h1>
+      <%= article.title %>
+    </h1>
+    <p>
+      <%= article.body.slice!(0..10)... %>
+    </p>
+  </article>
+<% end %>
