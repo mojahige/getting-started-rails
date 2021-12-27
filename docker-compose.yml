@@ -10,10 +10,12 @@ services:
       - "5432:5432"
   web:
     build: .
-    command: ./bin/entrypoint.sh
+    command: bash -c "rm -f tmp/pids/server.pid && ./bin/dev"
     volumes:
       - .:/myapp
     ports:
       - "3000:3000"
     depends_on:
       - db
+    stdin_open: true
+    tty: true
