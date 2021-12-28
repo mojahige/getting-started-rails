@@ -12,8 +12,22 @@
   </head>
 
   <body>
-    <main class="p-[41px]">
+    <header class="px-4 py-2 bg-slate-200">
+      <h1 class="text-l font-bold">
+        Test Rails
+      </h1>
+    </header>
+    
+    <main class="p-4 sm:p-6">
       <%= yield %>
     </main>
+
+    <footer class="bg-slate-100">
+      <p class="text-center font-bold">
+        <small>
+          copyright
+        </small>
+      </p>
+    </footer>
   </body>
 </html>

@@ -1,12 +1,17 @@
-<h1>Hello, Rails!</h1>
+<section>
+  <h1 class="text-2xl sm:text-4xl font-bold">
+    Articles
+  </h1>
 
-<% @articles.each do |article| %>
-  <article>
-    <h1>
-      <%= article.title %>
-    </h1>
-    <p>
-      <%= article.body.slice!(0..10)... %>
-    </p>
-  </article>
-<% end %>
+  <% @articles.each do |article| %>
+    <article>
+      <h1 class="text-lg sm:text-2xl font-bold">
+        <%= article.title %>
+      </h1>
+
+      <p>
+        <%= article.body.slice!(0..10)... %>
+      </p>
+    </article>
+  <% end %>
+</section>
