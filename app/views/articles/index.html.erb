@@ -6,7 +6,9 @@
   <% @articles.each do |article| %>
     <article>
       <h1 class="text-lg sm:text-2xl font-bold">
-        <%= article.title %>
+        <a href="/articles/<%= article.id %>">
+          <%= article.title %>
+        </a>
       </h1>
 
       <p>
