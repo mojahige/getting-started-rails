@@ -6,4 +6,13 @@
   <p>
     <%= @article.body %>
   </p>
+
+  <ul class="mt-6 flex flex-col gap-2">
+    <li>
+      <%= link_to "Edit", edit_article_path(@article), class: "inline-block rounded-md bg-indigo-500 text-white py-2 px-4 cursor-pointer hover:bg-indigo-600" %>
+    </li>
+    <li>
+      <%= button_to "Delete", { id: @article.id}, method: :delete, class: "inline-block rounded-md bg-red-500 text-white py-2 px-4 cursor-pointer hover:bg-red-600" %>
+    </li>
+  </ul>
 </section>
